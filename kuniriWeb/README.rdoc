@@ -1,5 +1,7 @@
 == README
 
+{<img src="https://codeclimate.com/github/cotrim149/kuniriWeb/badges/gpa.svg" />}[https://codeclimate.com/github/cotrim149/kuniriWeb]
+{<img src="https://codeclimate.com/github/cotrim149/kuniriWeb/badges/coverage.svg" />}[https://codeclimate.com/github/cotrim149/kuniriWeb/coverage]
 {<img alt='Stories in Ready' src='https://badge.waffle.io/cotrim149/kuniriWeb.png?label=ready&title=Ready' />}[https://waffle.io/cotrim149/kuniriWeb]
 
 Kuniri Web App
