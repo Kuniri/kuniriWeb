@@ -45,5 +45,9 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
    # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem 'rspec', '~> 3.1.0'
+  gem 'guard-rspec', '~> 4.2.10'
+  gem 'simplecov', '~> 0.9.0'
+  gem "codeclimate-test-reporter", group: :test, require: nil
 end
 
