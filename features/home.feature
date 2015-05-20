@@ -5,9 +5,9 @@ Feature:
 
 
 	Scenario: Visualize Home Page
-		Given I am on the KinuriWeb home page
+		Given I am on the kuniri home page
 		When I follow "Home"
-		Then I should be on KinuriWeb home page
-		And I should see "KinuriWeb"
+		Then I should be on kuniri home page
+		And I should see "kuniri"
 
 
