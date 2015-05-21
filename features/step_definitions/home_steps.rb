@@ -1,5 +1,4 @@
 Given /^(?:|I )am on the (.+) home page$/ do |page_name|
-  #get :page_name
   visit "/#{page_name}"
 end
 

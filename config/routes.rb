@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  get '/KinuriWeb' => 'home_page#home'
+  get '/kuniri' => 'home_page#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
