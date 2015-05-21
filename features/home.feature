@@ -8,6 +8,6 @@ Feature:
 		Given I am on the kuniri home page
 		When I follow "Home"
 		Then I should be on kuniri home page
-		And I should see "kuniri"
+		And I should see "kuniri" title
 
 
