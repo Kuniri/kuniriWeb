@@ -23,4 +23,12 @@ And /^(?:|I )should see "([^"]*)" title$/ do |text|
   end
 end
 
+And /^(?:|I )should see a brief explain "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end 
+
 

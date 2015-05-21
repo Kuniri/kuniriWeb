@@ -9,6 +9,6 @@ Feature:
 		When I follow "Home"
 		Then I should be on kuniri home page
 		And I should see "kuniri" title
-		And I should see a brief explain "about" kuniri
+		And I should see a brief explain "About Kuniri"
 
 
