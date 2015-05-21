@@ -1,5 +1,6 @@
-Given /^(?:|I )am on (.+)$/ do |page_name|
-  visit path_to(page_name)
+Given /^(?:|I )am on the (.+) home page$/ do |page_name|
+  #get :page_name
+  visit "/#{page_name}"
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
