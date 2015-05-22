@@ -6,7 +6,7 @@ When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
 
-Then /^(?:|I )should be on (.+) home page$/ do |page_name|
+Then /^(?:|I )should be on (.+) page$/ do |page_name|
   current_path = URI.parse(current_url).path
   if current_path.respond_to? :should
     current_path.should == "/#{page_name}"

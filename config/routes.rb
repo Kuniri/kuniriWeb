@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   get '/kuniri' => 'home_page#home'
+  get '/contact' => 'contact#contact'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
