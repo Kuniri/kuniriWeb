@@ -10,7 +10,3 @@ Feature:
 		Then I should be on team page
 		#And I should see "kuniri" title
 		#And I should see a brief explain "About Kuniri"
-		
-
-
-#Criação do link "conheça os desenvolvedores": Para quando o usuário apertar no link e ser direcionado para a página de perfis dos desenvolvedores
