@@ -5,5 +5,5 @@ Feature:
 
 	Scenario: Visualize contact us Page
 		Given I am on the kuniri home page
-		When I follow "Contact us"
+		When I follow "Contact Us"
 		Then I should be on contact page
