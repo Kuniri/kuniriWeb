@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/kuniri' => 'home_page#home'
   get '/contact' => 'contact#contact'
+  get '/team' => 'team#team'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
