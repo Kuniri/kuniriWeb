@@ -2,7 +2,7 @@ Given /^(?:|I )am on the (.+) home page$/ do |page_name|
   visit "/#{page_name}"
 end
 
-When /^(?:|I )follow "([^"]*)"$/ do |link|
+When /^(?:|I )follow "(.*)"$/ do |link|
   click_link(link)
 end
 
@@ -15,7 +15,7 @@ Then /^(?:|I )should be on (.+) page$/ do |page_name|
   end
 end
 
-And /^(?:|I )should see "([^"]*)" title$/ do |text|
+And /^(?:|I )should see "(.*)" title$/ do |text|
   if page.respond_to? :should
     page.should have_content(text)
   else
@@ -23,7 +23,7 @@ And /^(?:|I )should see "([^"]*)" title$/ do |text|
   end
 end
 
-And /^(?:|I )should see a brief explain "([^"]*)"$/ do |text|
+And /^(?:|I )should see a brief explain "(.*)"$/ do |text|
   if page.respond_to? :should
     page.should have_content(text)
   else
