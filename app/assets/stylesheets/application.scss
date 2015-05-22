@@ -7,10 +7,9 @@ html, body {
   font-size: 10pt;
 }
 
-div.row {
+div#main {
   margin: 0;
-  padding: 2px;
-  background: url("http://gordygong.com/wp-content/uploads/2009/12/grim-reaper-black-pattern.jpg") no-repeat 0px 0px;
+  padding: 0;
 }
 a {
   background: transparent;
@@ -22,22 +21,16 @@ h1 {
   background-color: transparent;
   color: maroon;
   font-size: 600%;
-  text-decoration: blink;
   font-style: normal;
   text-align: center;
 }
 h2 {
-  padding: 10px;
-  margin: 0 -10px;
   background-color: black;
-  border-top: thin solid #C0C0C0;
-  border-bottom: thin solid #C0C0C0;
-  border-left: thin solid #C0C0C0;
-  border-right: thin solid #C0C0C0;
-  word-spacing: 2em;
+  border-top: medium double #C0C0C0;
+  border-bottom: medium double #C0C0C0;
   font-size: 100%;
   font-style: normal;
-  text-align: center;
+  text-align: left;
 }
 h3 {
   text-align: center;
@@ -55,9 +48,9 @@ h5 {
   margin-right: 2em;
 }
 h1.title {
-  text-decoration: blink;
   margin: 0 0 1em;
   padding: 10px;
+  background-image: asset-data-url("lack-pattern-4-facebook-cover-timeline-banner-for-fb.jpg") no-repeat 0px 0px;
   text-indent:0;
   color: white;
   font-size: 600%;
