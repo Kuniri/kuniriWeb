@@ -6,9 +6,8 @@ Feature:
 
 	Scenario: Visualize know developers
 		Given I am on the kuniri home page
-		When I follow "know_team"
-		Then I should be on know team page
-		
+		When I follow "Team"
+		Then I should be on team page
 		#And I should see "kuniri" title
 		#And I should see a brief explain "About Kuniri"
 		
