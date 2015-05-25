@@ -49,5 +49,8 @@ group :development, :test do
   gem 'guard-rspec', '~> 4.2.10'
   gem 'simplecov', '~> 0.9.0'
   gem "codeclimate-test-reporter", group: :test, require: nil
+  gem 'bootstrap-sass', '~> 3.2.0'
+  gem 'autoprefixer-rails'
+
 end
 
