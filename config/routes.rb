@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/contact' => 'contact#contact'
   get '/team' => 'team#team'
   get '/login' => 'login#login'
-  get '/analyse_code' => 'analyse_code#home'
+  get '/analyse_code' => 'analyse_code#analyse_code'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,4 +1,4 @@
 class AnalyseCodeController < ApplicationController
-	def home
+	def analyse_code
 	end
 end
