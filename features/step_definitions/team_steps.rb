@@ -5,6 +5,8 @@ Then(/^I should see the (.*) of each member$/) do |word|
 		words = ["Lais", "Rodrigo", "Victor"]
 	elsif word == "e-mail"
 		words = ["lais_barreto92@hotmail.com", "rodrigomelosiqueira@gmail.com", "cotrim149@gmail.com"]
+	elsif word == "gitHub link"
+		words = ["GitHub_Profile"]
 	end
 
 	words.each do |text|
@@ -14,8 +16,4 @@ Then(/^I should see the (.*) of each member$/) do |word|
 	end
 
 
-end
-
-Then(/^I should see the (.*) link of each member$/) do |word|
-	pending
 end
