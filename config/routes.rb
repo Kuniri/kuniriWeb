@@ -10,8 +10,10 @@ Rails.application.routes.draw do
   get '/team' => 'team#team'
   get '/login' => 'login#login'
   get '/analyse_code' => 'analyse_code#analyse_code'
-  get '/sign_up' => 'sign_up#sign_up'
+#  get '/sign_up' => 'sign_up#sign_up'
 
+  get 'sign_up' => 'users#new'
+  resources :users
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
