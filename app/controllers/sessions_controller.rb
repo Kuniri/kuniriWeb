@@ -23,8 +23,11 @@ class SessionsController < ApplicationController
     	flash.now[:error] = 'Invalid email/password combination'
       redirect_to 'login' and return
     end
-
-
   end
   
+ 	def destroy
+ 		session[:user_id] = nil
+ 		redirect_to '/kuniri'
+ 	end
+ 	
 end
