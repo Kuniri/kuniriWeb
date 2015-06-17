@@ -2,11 +2,12 @@
 	<div class="container">
 		<div class="form">
 
-			<%= form_for :project do |p| %> 
-			  <%= p.url_field :link, :placeholder => "GitHub link of project" %> 
-			  <%= p.submit "Submit project", class: "btn-submit" %>
-			<% end %>
-
+			<%if current_user %>
+				<%= form_for :project do |p| %> 
+				  <%= p.url_field :link, :placeholder => "GitHub link of project" %> 
+				  <%= p.submit "Submit project", class: "btn-submit" %>
+				<% end %>
+			<%end%>
 		
     </div>
 	</div>
