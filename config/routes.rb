@@ -9,18 +9,18 @@ Rails.application.routes.draw do
   get '/contact' => 'contact#contact'
   get '/team' => 'team#team'
 #  get '/login' => 'login#login'
-  get '/analyse_code' => 'analyse_code#analyse_code'
+  get '/analyse_code' => 'analyse_code#new'
+  post '/analyse_code' => 'analyse_code#create'
 #  get '/sign_up' => 'sign_up#sign_up'
 
-  get 'sign_up' => 'users#new'
+  get '/sign_up' => 'users#new'
   resources :users
 
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
-  delete 'logout' => 'sessions#destroy'
-
-  get 'logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

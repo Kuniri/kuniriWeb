@@ -14,7 +14,9 @@
           
           <% if current_user %>
             <h5>
-            	<li><%= current_user.email %></li>
+            	<li>Welcome <%= current_user.first_name %></li>
+              <%= current_user.email %>
+              <%= link_to 'Edit', '/edit' %>
               <%= link_to 'Logout', logout_path,method: "delete" %>
             </h5>        
           <% else%>
