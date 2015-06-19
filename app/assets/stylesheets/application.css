@@ -1,27 +1,28 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: url("http://www.cuzzsoft.com/wallbank/201-black-background-collapsar-wallpaper.jpg");
-  color: #C0C0C0;
+  background: url("");
+  color: #656767;
   font-family: Times New Roman, serif;
   font-size: 10pt;
 }
 
 div.row {
+  padding: 0.1px;
   margin: 0;
-  padding: 2px;
-  background: url("http://gordygong.com/wp-content/uploads/2009/12/grim-reaper-black-pattern.jpg") no-repeat 0px 0px;
+  background: url("http://www.twitterevolutions.com/bgs/lights-twitter-background.jpg") top center;
 }
+
 a {
   background: transparent;
-  color: maroon;
+  color: #15575F;
   font-weight: bold;
   text-align: center;
 }
 h1 {
   background-color: transparent;
-  color: maroon;
-  font-size: 600%;
+  color: #15575F;
+  font-size: 500%;
   text-decoration: blink;
   font-style: normal;
   text-align: center;
@@ -29,12 +30,7 @@ h1 {
 h2 {
   padding: 10px;
   margin: 0 -10px;
-  background-color: black;
-  border-top: thin solid #C0C0C0;
-  border-bottom: thin solid #C0C0C0;
-  border-left: thin solid #C0C0C0;
-  border-right: thin solid #C0C0C0;
-  word-spacing: 2em;
+  background-color: #15575F;
   font-size: 100%;
   font-style: normal;
   text-align: center;
@@ -49,46 +45,54 @@ h4 {
   margin-left: 10em;
 }
 h5 {
-  font-size: 100%;
+  font-size: 120%;
   font-style: normal;
   text-align: right;
+  color: #15575F;
   margin-right: 2em;
+
 }
 h1.title {
   text-decoration: blink;
   margin: 0 0 1em;
-  padding: 10px;
+  padding: 5px;
   text-indent:0;
   color: white;
-  font-size: 600%;
+  font-size: 500%;
   font-style: normal;
 }
-table#movies {
-  margin: 10px;
-  border-collapse: collapse;
-  width: 100%;
-  border-bottom: 2px solid black;
-}
-table#movies th {
-  border: 2px solid white;
-  font-weight: bold;
-  background-color: wheat;
-}
-table#movies th, table#movies td {
-  padding: 4px;
-  text-align: left;
-}
-#notice #warning {
-  background: rosybrown;
-  margin: 1em 0;
-  padding: 4px;
-}
-form label {
+
+div.form {
+  text-align: center;
   display: block;
   line-height: 25px;
   font-weight: bold;
   color: maroon;
+  padding: 30px;
 }
 footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:50px;
+  width:100%;
   text-align: center;
+}
+
+.barNav a {
+font: 16px Times New Roman, Verdana,Helvetica,sans-serif;
+color: #FFFFFF;
+text-decoration: none;
+background: #15575F;
+text-align: center;
+padding: 1px 5px;
+margin-right: -1px;
+border: 0px solid #000000;
+}
+ 
+ 
+.barNav a:hover {
+color: #666666;
+background: #FCFCFC;
+border: 1px solid #666666;
 }
