@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   
 
   get 'settings' => 'settings#profile'
+
+  get 'history' => 'history#show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
