@@ -1,0 +1,9 @@
+<div class="confirm"> 
+  <% if current_user%>
+    Are you sure you want to delete your account?<br><br>
+    <%= form_for :user do |p| %> 
+    <%= p.submit "Yes", class: "btn-submit" %>
+    <%= p.submit "No", class: "btn-submit" %>
+    <% end %>
+  <% end %>
+</div>

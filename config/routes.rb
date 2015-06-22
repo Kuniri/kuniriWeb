@@ -25,7 +25,15 @@ Rails.application.routes.draw do
 
   get 'settings' => 'settings#profile'
 
+  get '/delete_account' => 'settings#delete_account'
+  post 'delete_account' => 'users#destroy'
+  resources :users
+
   get 'history' => 'history#show'
+
+  get '/edit' => 'users#edit'
+  post '/edit' => 'users#update'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
