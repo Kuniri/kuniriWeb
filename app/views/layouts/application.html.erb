@@ -8,19 +8,17 @@
 </head>
 <body>
 
-  <p id="notice"><%= notice %></p>
      <div class="row">
-        <div class="large-12 columns">
-          
+      
           <% if current_user %>
-            <h5>
-            	<li>Welcome <%= current_user.first_name %></li>
-              <%= current_user.email %>
-              <%= link_to 'Settings', '/settings' %>
-              <%= link_to 'Logout', logout_path,method: "delete" %>
-            </h5>        
+            <p class="welcome">
+              <h5 class="barNav">
+                Welcome, <%= current_user.first_name %>! 
+                <%= link_to 'Settings', '/settings' %>
+                <%= link_to 'Logout', logout_path,method: "delete" %>
+              </h5>       
           <% else%>
-            <h5> 
+            <h5 class="barNav">
               <%= link_to 'Login', "/login" %>
             
               <%= link_to 'Sign Up', "/sign_up" %> 
@@ -29,19 +27,27 @@
           
 
           <h1>Kuniri<i>Web</i></h1>
-          <h2><%= link_to 'Home', "/kuniri" %>
+          <h2 class="barNav">
+              <%= link_to 'Home', "/kuniri" %>
 
-              <%= link_to 'Analyse_Code', "/analyse_code" %>
+              <%= link_to 'Analyse Code', "/analyse_code" %>
 
               <%= link_to 'Contact', "/contact" %>
 
               <%= link_to 'Team', "/team" %>
-
           </h2>
-        </div>
+
       </div>
 
 <%= yield %>
 
 </body>
+
+      <footer>
+        <div align="center">
+        <hr>
+         <p>© Copyright 2015. Kuniri.</p>
+        </hr>
+        </div>
+      </footer>
 </html>
