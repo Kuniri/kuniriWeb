@@ -10,6 +10,8 @@ class AnalyseCodeController < ApplicationController
 		@project.name = extract_name_project(@project.link)
 		@project.user_id = current_user.id
 
+		analyse_code(@project.link)
+
 		if @project.save
 			flash[:notice] = "project analysed with success. user id: #{@project.user_id}"
 			redirect_to '/kuniri' and return
@@ -18,13 +20,14 @@ class AnalyseCodeController < ApplicationController
 		end
 	end
 
-	def analyse_code
+	def analyse_code(link)
+		
 	end
 
-def extract_name_project(link)
-	name = /https:\/\/github.com\/(\w*)\/(\w*)/.match(link)
-	name[2]
-end
+	def extract_name_project(link)
+		name = /https:\/\/github.com\/(\w*)\/(\w*)/.match(link)
+		name[2]
+	end
 
 	private
 
