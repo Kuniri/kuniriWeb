@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+  get '/index' => 'users#index'  
+
   get '/kuniri' => 'home_page#home'
   get '/contact' => 'contact#contact'
   get '/team' => 'team#team'
