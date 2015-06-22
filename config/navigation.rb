@@ -58,7 +58,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :profile_link, 'Profile', '/'
     primary.item :history_link, 'History', '/'
-    primary.item :delete_account_link, 'Delete Account', '/'
+    primary.item :delete_account_link, 'Delete Account', '/delete_account'
 
 
     # Add an item which has a sub navigation (same params, but with block)
