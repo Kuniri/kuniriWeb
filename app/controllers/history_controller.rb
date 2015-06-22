@@ -1,7 +1,8 @@
 class HistoryController < ApplicationController
 
 	def show
-#		@project = Project.find_by(user_id: current_user.id)
+		query = "user_id=#{current_user.id}"
+		@projects = Project.where(query)
 	end
 
 end
