@@ -7,7 +7,7 @@ class AnalyseCodeController < ApplicationController
 
 	def create
 		@project = Project.new(project_param)
-		@project.name = "Diagrama 1"
+		@project.name = extract_name_project(@project.link)
 		@project.user_id = current_user.id
 
 		if @project.save
@@ -20,6 +20,11 @@ class AnalyseCodeController < ApplicationController
 
 	def analyse_code
 	end
+
+def extract_name_project(link)
+	name = /https:\/\/github.com\/(\w*)\/(\w*)/.match(link)
+	name[2]
+end
 
 	private
 
