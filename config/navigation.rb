@@ -57,7 +57,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
 
-    primary.item :profile_link, 'Profile', '/' do |sub_nav|
+    primary.item :profile_link, 'Profile', '/edit' do |sub_nav|
       sub_nav.item :change_password, 'Change Password', '/'
     end
     primary.item :history_link, 'History', '/'

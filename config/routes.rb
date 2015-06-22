@@ -31,6 +31,9 @@ Rails.application.routes.draw do
 
   get 'history' => 'history#show'
 
+  get '/edit' => 'users#edit'
+  post '/edit' => 'users#update'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

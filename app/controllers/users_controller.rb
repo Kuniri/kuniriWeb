@@ -17,13 +17,23 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-		@user = User.find(params[:id])
+		@user = User.find(current_user)
 	end
 
+	def update
+		@user = User.find(params[:id])
+		if @user.update_attributes(user_params)
+			flash[:success] = "Profile updated"
+			redirect_to '/settings'
+		else
+			render '/edit'
+    end
+  end
+
 	def destroy
-		User.find(params[:id]).destroy
+		User.find(current_user).destroy
 		flash[:success] = "User deleted!"
-		redirect_to '/home_page'
+		redirect_to '/kuniri'
 	end
 
 	private
@@ -41,8 +51,10 @@ class UsersController < ApplicationController
 
 		# Confirms the correct user.
 		def correct_user
-			@user = User.find(params[:id])
-			redirect_to('/home_page') unless current_user?(@user)
+			@user = User.find(current_user)
+			if not current_user
+				redirect_to('/home_page') #unless current_user?(@user)
+			end
 		end
 
 end
