@@ -25,14 +25,12 @@ Rails.application.routes.draw do
 
   get 'settings' => 'settings#profile'
 
-<<<<<<< HEAD
   get '/delete_account' => 'settings#delete_account'
   post 'delete_account' => 'users#destroy'
   resources :users
 
-=======
   get 'history' => 'history#show'
->>>>>>> f62e38fbae70936e511ce72b37a146bd8b0ffd5d
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

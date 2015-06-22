@@ -56,18 +56,12 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
-<<<<<<< HEAD
+
     primary.item :profile_link, 'Profile', '/' do |sub_nav|
       sub_nav.item :change_password, 'Change Password', '/'
     end
     primary.item :history_link, 'History', '/'
     primary.item :delete_account_link, 'Delete Account', '/delete_account'
-=======
-
-
-
->>>>>>> f62e38fbae70936e511ce72b37a146bd8b0ffd5d
-
 
     # Add an item which has a sub navigation (same params, but with block)
 #    primary.item :key_2, 'name', '/', options do |sub_nav|
