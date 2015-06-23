@@ -57,10 +57,8 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
 
-    primary.item :profile_link, 'Profile', '/edit' do |sub_nav|
-      sub_nav.item :change_password, 'Change Password', '/'
-    end
-    primary.item :history_link, 'History', '/'
+    primary.item :profile_link, 'Profile', '/edit'
+    primary.item :history_link, 'History', '/history'
     primary.item :delete_account_link, 'Delete Account', '/delete_account'
 
     # Add an item which has a sub navigation (same params, but with block)
