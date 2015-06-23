@@ -13,7 +13,7 @@ User.create!(first_name:  "Lais",
              password_confirmation: "admin",
              admin: true)
 
-99.times do |n|
+10.times do |n|
   name  = "Jonas"
   last_name = "Stelth"
   email = "example-#{n+1}@railstutorial.org"

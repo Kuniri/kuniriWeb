@@ -28,9 +28,9 @@ Rails.application.routes.draw do
   get 'settings' => 'settings#profile'
 
   get '/delete_account' => 'settings#delete_account'
-  post 'delete_account' => 'users#destroy'
-
+  post '/delete_account' => 'users#destroy'
   delete '/delete_account' => 'users#destroy'
+  
   resources :users
 
   get 'history' => 'history#show'
