@@ -60,9 +60,8 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :profile_link, 'Profile', '/edit'
     primary.item :history_link, 'History', '/history'
 
-    if current_user.admin?
-      primary.item :delete_account_link, 'Delete Account', '/delete_account'
-    end
+    primary.item :delete_account_link, 'Delete Account', '/delete_account'
+
     # Add an item which has a sub navigation (same params, but with block)
 #    primary.item :key_2, 'name', '/', options do |sub_nav|
       # Add an item to the sub navigation (same params again)
