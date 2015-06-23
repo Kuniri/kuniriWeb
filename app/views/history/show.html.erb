@@ -1,25 +1,26 @@
 <%= render_navigation %>
 
-<table>
+<table align="center">
   <tr>
     <th>Title</th>
     <th>Link</th>
-    <th>Class diagram</th>
-    <th></th>
-    <th></th>
+    <th>Class Diagram</th>
+    <th>Analysis Date</th>
   </tr>
 
 		<% @projects.each do |p| %>
 		  <tr>
 		    <td><%= p.name %></td>
 		    <td><%= p.link %></td>
+		    <td></td>
+		    <td></td>
 		    
 		    <% if false %>
 			    <td><%= link_to "Show", book %></td>
 			    <td><%= link_to "Edit", edit_book_path(book) %></td>
 			    <td><%= link_to "Remove", book, method: :delete, data: { confirm: "Are you sure?" } %></td>
-		  	<% end %>
+		    <% end %>
 
 		  </tr>
-		<% end %>
+	        <% end %>
 </table>
