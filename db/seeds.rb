@@ -15,9 +15,11 @@ User.create!(first_name:  "Lais",
 
 99.times do |n|
   name  = "Jonas"
+  last_name = "Stelth"
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
-  User.create!(name:  name,
+  User.create!(first_name:  name,
+                last_name: last_name,
                email: email,
                password:              password,
                password_confirmation: password)
