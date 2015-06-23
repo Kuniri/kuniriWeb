@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: url("");
+  background: url("http://webdesignledger.com/wp-content/uploads/2012/09/patterns04.jpg");
   color: #656767;
   font-family: Times New Roman, serif;
   font-size: 11pt;
@@ -126,5 +126,12 @@ td {
 th {
   background-color: #909090;
   color: white;
+  text-align: center;
+}
+
+.notice {
+  background: white;
+  border: 2px solid #15575F;
+  text-decoration: bold;
   text-align: center;
 }

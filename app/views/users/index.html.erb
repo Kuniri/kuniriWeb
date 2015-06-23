@@ -1,4 +1,6 @@
 <% provide(:title, 'All users') %>
+
+<% if current_user && current_user.admin? %>
 <h3>All users</h3>
 
 <ul class="users">
@@ -7,4 +9,5 @@
       <%= render user %>
     </li>
   <% end %>
+<% end %>
 </ul>

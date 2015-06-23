@@ -1,9 +1,17 @@
 <div>
-  <%= link_to user.first_name, user %>
-  <% if current_user.admin? %>
+
+  <% if current_user.nil? %>
+    <p> Please, log in!</p>
+
+  <% elsif current_user %>
+    <%= link_to user.first_name, user %>
+
+  <% elsif current_user.admin? %>
+    <%= link_to user.first_name, user %>
     <p class="barNav" display="inline-block">
         <%= link_to "delete", user, method: :delete,
                                   data: { confirm: "You sure?" } %><br><br>
-      </p>
+    </p>
+
   <% end %>
 </div>
