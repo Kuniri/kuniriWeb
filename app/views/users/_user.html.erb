@@ -1,7 +1,9 @@
-<li>
+<div>
   <%= link_to user.first_name, user %>
   <% if current_user.admin? %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
+    <p class="barNav" display="inline-block">
+        <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "You sure?" } %><br><br>
+      </p>
   <% end %>
-</li>
+</div>

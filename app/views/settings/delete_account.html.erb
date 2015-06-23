@@ -1,7 +1,9 @@
 <div class="confirm"> 
   <% if current_user%>
     To delete your account, click on link below.<br><br>
-    <%= link_to "Delete Account", @user, method: :delete,
+    <p class="barNav">
+      <%= link_to "Delete Account", @user, method: :delete,
                                   data: { confirm: "You sure?" } %>
+    </p>
   <% end %>
 </div>
