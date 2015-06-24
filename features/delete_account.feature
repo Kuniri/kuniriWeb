@@ -28,7 +28,7 @@ Scenario: delete account
 	And I follow "Settings"
 	And I follow "Delete Account"
 	And I follow "Delete my account"
-	Then I should see "User account deleted with succes!"
+	Then I should see "User account deleted with success!"
 	Then I should be on kuniri page
 
 Scenario: check deletion of user account

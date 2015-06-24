@@ -6,6 +6,10 @@ When /^(?:|I )follow "(.*)"$/ do |link|
   click_link(link)
 end
 
+And /^(?:|I )follow the second "(.*)" link$/ do |link|
+	page.first(:link, link).click
+end
+
 Then /^(?:|I )should be on (.+) page$/ do |page_name|
   current_path = URI.parse(current_url).path
   if current_path.respond_to? :should
