@@ -2,7 +2,7 @@
   <% if current_user%>
     To delete your account, click on link below.<br><br>
     <p class="barNav">
-      <%= link_to "Delete Account", @user, method: :delete,
+      <%= link_to "Delete my account", @user, method: :delete,
                                   data: { confirm: "You sure?" } %>
     </p>
   <% end %>
