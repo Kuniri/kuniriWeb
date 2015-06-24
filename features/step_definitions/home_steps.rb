@@ -1,4 +1,4 @@
-Given /^(?:|I )am on the (.+) home page$/ do |page_name|
+Given /^(?:|I )am on the (.+) page$/ do |page_name|
   visit "/#{page_name}"
 end
 

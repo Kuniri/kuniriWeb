@@ -5,7 +5,7 @@ Feature:
 
 
 	Scenario: Visualize know developers
-		Given I am on the kuniri home page
+		Given I am on the kuniri page
 		When I follow "Team"
 		Then I should be on team page
 		#And I should see "kuniri" title
