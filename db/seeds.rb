@@ -19,7 +19,7 @@ User.create!(first_name:  "Lais",
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
   User.create!(first_name:  name,
-                last_name: last_name,
+               last_name: last_name,
                email: email,
                password:              password,
                password_confirmation: password)
