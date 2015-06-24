@@ -41,3 +41,12 @@ Scenario: check user deletion
 	And I follow "Users"
 	Then I should be on index page
 	And I should not see "Zezinho"
+
+Scenario: garantee that a normal user cannot delete another user
+	Given I am on the login page
+	When I fill in "Email" with "ze@email"
+	And I fill in "Password" with "ze"
+	And I press "Log In"
+	And I follow "Users"
+	And I should not see "Juninho"
+	And I should not see "Lais"
