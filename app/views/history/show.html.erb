@@ -12,8 +12,8 @@
 		  <tr>
 		    <td><%= p.name %></td>
 		    <td><%= p.link %></td>
-		    <td></td>
-		    <td></td>
+		    <td><%= link_to "Show", "/analyse_code?project_name=#{p.name}" %></td>
+		    <td><%= p.created_at %></td>
 		    
 		    <% if false %>
 			    <td><%= link_to "Show", book %></td>
