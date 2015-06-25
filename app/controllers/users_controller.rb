@@ -46,7 +46,7 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-		@user = User.find(current_user)
+		@user = User.find(current_user.id)
 	end
 
 	def update
@@ -86,7 +86,7 @@ class UsersController < ApplicationController
 
 		# Confirms the correct user.
 		def correct_user
-			@user = User.find(current_user)
+			@user = User.find(current_user.id)
 			if not current_user
 				redirect_to('/kuniri') #unless current_user?(@user)
 			end
