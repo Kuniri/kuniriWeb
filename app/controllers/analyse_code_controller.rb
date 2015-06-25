@@ -1,6 +1,6 @@
 class AnalyseCodeController < ApplicationController
 	before_action :require_user, only: [:index, :show]
-	
+
 	def new
 		@project = Project.new
 	end
@@ -23,7 +23,7 @@ class AnalyseCodeController < ApplicationController
 	def analyse_code
 		create_local_repo
 		clone_repo_from_link
-		run_kuniry
+		run_kuniri
 	end
 
 	private
@@ -42,11 +42,31 @@ class AnalyseCodeController < ApplicationController
 		end
 
 		def clone_repo_from_link
-			cmd_clone = "git clone #{@project.link} projects/#{@project.name}"
+			config_path = "projects/#{current_user.id}/#{@project.name}"
+			cmd_clone = "git clone #{@project.link} #{config_path}"
 			system(cmd_clone)
 		end
 
-		def run_kuniry
+		def run_kuniri
+			create_local_config
+#			kuniri = Kuniri.new("config_path/.kuniri")
+#			kuniri.run_analysis
 			flash[:notice] = "Project analysed with success!"
+		end
+
+		def create_local_config
+
+			config_path = "projects/#{current_user.id}/#{@project.name}"
+
+			File.open("#{config_path}/.kuniri", "w+") do |file|
+
+		  	file.write("language:ruby\n")
+		  	file.write("source:./\n")
+		  	file.write("output:./\n") #isso gera uma porrada de arquivos
+		  	file.write("extract:xml\n")
+			end
+
+#			system("touch project/#{current_user.id}/#{@project.name}/.kuniri")
+#			cat << EOF >> test.txt
 		end
 end

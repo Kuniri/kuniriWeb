@@ -17,9 +17,29 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params)
+		error_message = ""
+
+		if @user.password != @user.password_confirmation
+			error_message = "password do not match!"
+			flash[:notice] = error_message
+			redirect_to '/sign_up' and return
+#			render :partial => "users/new", :locals => {:first_name => @user.first_name ,:last_name => @user.last_name, :email => @user.email} and return
+		end
+
+		if User.find_by_email(@user.email)
+			if error_message == ""
+				error_message = "e-mail was alredy registered"
+			else
+				error_message = error_message + "\n e-mail was alredy registered!"
+			end
+			
+			flash[:notice] = error_message
+			redirect_to '/sign_up' and return
+		end
+
 		if @user.save
 			session[:user_id] = @user.id
-			redirect_to '/kuniri'
+			redirect_to '/kuniri' 
 		else
 			redirect_to '/sign_up'
 		end
@@ -52,7 +72,7 @@ class UsersController < ApplicationController
 
 	private
 		def user_params
-			params.require(:user).permit(:first_name,:last_name, :email, :password)
+			params.require(:user).permit(:first_name,:last_name, :email, :password,:password_confirmation)
 		end
 
 		# Confirms a logged-in user.
