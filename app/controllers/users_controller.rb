@@ -54,7 +54,8 @@ class UsersController < ApplicationController
 			flash[:notice] = "Profile updated!"
 			redirect_to '/settings'
 		else
-			render '/edit'
+			flash[:notice] = "Password do not match!"
+			render 'users/edit'
     		end
   	end
 

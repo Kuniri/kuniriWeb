@@ -61,3 +61,16 @@ Scenario: check updated information (new password allows realize login)
 	Then I should see "Success on login"
 	And I should see "Welcome, Lais!"
 	And I should be on kuniri page
+
+Scenario: check updated information (change old password for a new with different confirmation password)
+	Given I am on the login page
+	When I fill in "Email" with "lais@email"
+	And I fill in "Password" with "123"
+	And I press "Log In"
+	And I follow "Settings"
+	And I follow "Profile"
+	And I fill in "Email" with "lais@email"
+	And I fill in "Password" with "123"
+	And I fill in "Confirmation" with "1234"
+	And I press "Save changes"
+	Then I should see "Password do not match!"
