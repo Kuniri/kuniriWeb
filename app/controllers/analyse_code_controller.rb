@@ -17,8 +17,9 @@ class AnalyseCodeController < ApplicationController
 
 		if @project.save
 			#flash[:notice] = "project submited with success."
-			redirect_to '/analyse_code' and return
+			redirect_to "/analyse_code?project_name=#{@project.name}" and return
 		else
+			flash[:notice] = "project can not be analysed."
 			redirect_to '/analyse_code' and return
 		end
 	end
