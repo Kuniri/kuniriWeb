@@ -1,3 +1,6 @@
+require 'kuniri/core/kuniri'
+require 'kuniri/parser/parser_xml'
+
 class AnalyseCodeController < ApplicationController
 	before_action :require_user, only: [:index, :show]
 
@@ -14,8 +17,9 @@ class AnalyseCodeController < ApplicationController
 
 		if @project.save
 			#flash[:notice] = "project submited with success."
-			redirect_to '/kuniri' and return
+			redirect_to "/analyse_code?project_name=#{@project.name}" and return
 		else
+			flash[:notice] = "project can not be analysed."
 			redirect_to '/analyse_code' and return
 		end
 	end
@@ -48,21 +52,34 @@ class AnalyseCodeController < ApplicationController
 		end
 
 		def run_kuniri
+			output_xml_path = create_output_xml_path
+
 			create_local_config
-#			kuniri = Kuniri.new("config_path/.kuniri")
-#			kuniri.run_analysis
+
+			kuniri = Kuniri::Kuniri.new("config_path/.kuniri")
+			kuniri.run_analysis
+	 		parser = Parser::XML.new
+			parser.set_path(output_xml_path)
+	 		parser.create_all_data kuniri.get_parser()
+	
 			flash[:notice] = "Project analysed with success!"
+		end
+
+		def create_output_xml_path
+			system("mkdir public/#{current_user.id}")
+			system("mkdir public/#{current_user.id}/#{@project.name}")
+			"public/#{current_user.id}/#{@project.name}/class_data.xml"
 		end
 
 		def create_local_config
 
 			config_path = "projects/#{current_user.id}/#{@project.name}"
-
+			system("mkdir #{config_path}/output")
 			File.open("#{config_path}/.kuniri", "w+") do |file|
 
 		  	file.write("language:ruby\n")
 		  	file.write("source:./\n")
-		  	file.write("output:./\n") #isso gera uma porrada de arquivos
+		  	file.write("output:output/\n") #isso gera uma porrada de arquivos
 		  	file.write("extract:xml\n")
 			end
 

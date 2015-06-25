@@ -28,6 +28,10 @@ gem 'bcrypt', '~> 3.1.10'
 
 # Use for lateral menu
 gem "simple-navigation"
+
+# kuniri gem
+gem 'kuniri', :path => 'kuniri'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
