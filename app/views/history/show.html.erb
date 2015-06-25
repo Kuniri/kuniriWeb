@@ -14,13 +14,6 @@
 		    <td><%= p.link %></td>
 		    <td><%= link_to "Show", "/analyse_code?project_name=#{p.name}" %></td>
 		    <td><%= p.created_at %></td>
-		    
-		    <% if false %>
-			    <td><%= link_to "Show", book %></td>
-			    <td><%= link_to "Edit", edit_book_path(book) %></td>
-			    <td><%= link_to "Remove", book, method: :delete, data: { confirm: "Are you sure?" } %></td>
-		    <% end %>
-
 		  </tr>
 	        <% end %>
 </table>
