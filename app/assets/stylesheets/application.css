@@ -135,3 +135,7 @@ th {
   text-decoration: bold;
   text-align: center;
 }
+
+#class_diagram{
+  background-color: rgba(21,87,95,0.2);
+}

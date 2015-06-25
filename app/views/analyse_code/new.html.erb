@@ -1,3 +1,6 @@
+<%= javascript_include_tag "apoena.js" %>
+<%= javascript_include_tag "apoena_parser.js" %>
+
 <div class="analysecode">
 
 	<div class="container">
@@ -9,8 +12,13 @@
 				  <%= p.url_field :link, :placeholder => "GitHub link of project" %> 
 				  <%= p.submit "Submit project", class: "btn-submit" %>
 				<% end %>
+
+				<canvas id= "class_diagram" width="800" height="600"></canvas>
+
 			<%end%>
 		
     </div>
 	</div>
 </div>
+
+<%= javascript_include_tag "load_from_apoena.js" %>

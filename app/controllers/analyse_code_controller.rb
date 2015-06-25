@@ -14,7 +14,7 @@ class AnalyseCodeController < ApplicationController
 
 		if @project.save
 			#flash[:notice] = "project submited with success."
-			redirect_to '/kuniri' and return
+			redirect_to '/analyse_code' and return
 		else
 			redirect_to '/analyse_code' and return
 		end
@@ -49,7 +49,7 @@ class AnalyseCodeController < ApplicationController
 
 		def run_kuniri
 			create_local_config
-#			kuniri = Kuniri.new("config_path/.kuniri")
+#			kuniri = Kuniri::Kuniri.new("config_path/.kuniri")
 #			kuniri.run_analysis
 			flash[:notice] = "Project analysed with success!"
 		end

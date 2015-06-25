@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<class_data name="HtmlLogger">
+  <method name="write_log">
+    <parameter>
+      <name>pMessage</name>
+    </parameter>
+  </method>
+</class_data>
