@@ -26,4 +26,4 @@ Scenario: submit a github project to be analysed
 	And I fill in "GitHub link of project" with "https://github.com/cotrim149/kuniriWeb"
 	And I press "Submit project"
 	Then I should see "Project analysed with success!"
-	Then I should be on kuniri page
+	Then I should be on analyse_code page

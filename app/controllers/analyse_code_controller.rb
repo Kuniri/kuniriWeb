@@ -13,21 +13,25 @@ class AnalyseCodeController < ApplicationController
 		@project.name = extract_name_project
 		@project.user_id = current_user.id
 
-		analyse_code
+		if @project.name != nil
+			analyse_code
 
-		if @project.save
-			#flash[:notice] = "project submited with success."
-			redirect_to "/analyse_code?project_name=#{@project.name}" and return
-		else
-			flash[:notice] = "project can not be analysed."
-			redirect_to '/analyse_code' and return
+			if @project.save
+				redirect_to "/analyse_code?project_name=#{@project.name}" and return
+			else
+				flash[:notice] = "Project can not be analysed."
+			end
 		end
+		flash[:notice] = "Project link do not exist!"
+
+		redirect_to '/analyse_code' and return
 	end
 
 	def analyse_code
 		create_local_repo
 		clone_repo_from_link
 		run_kuniri
+		delete_projects
 	end
 
 	private
@@ -37,8 +41,10 @@ class AnalyseCodeController < ApplicationController
 		end
 
 		def extract_name_project
-			name = /https:\/\/github.com\/(\w*)\/(\w*)/.match(@project.link)
-			name[2]
+			if @project.link != ""
+				name = /https:\/\/github.com\/(\w*)\/(\w*)/.match(@project.link)
+				name[2]
+			end
 		end
 
 		def create_local_repo
@@ -82,8 +88,9 @@ class AnalyseCodeController < ApplicationController
 		  	file.write("output:output/\n") #isso gera uma porrada de arquivos
 		  	file.write("extract:xml\n")
 			end
+		end
 
-#			system("touch project/#{current_user.id}/#{@project.name}/.kuniri")
-#			cat << EOF >> test.txt
+		def delete_projects
+			system("rm -rf projects/#{current_user.id}/*")
 		end
 end
