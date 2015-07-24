@@ -1,0 +1,3 @@
+heroku logs
+heroku pg:reset DATABASE_URL
+heroku run rake db:migrate
