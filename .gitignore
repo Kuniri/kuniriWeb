@@ -21,3 +21,6 @@
 
 # Ignore kuniri local project
 /kuniri
+
+# Ignore local xml files of users
+/public/*_id

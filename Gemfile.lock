@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rodrigosiqueira/kuniri
-  revision: 7fb3cc7efe8dfe22f7c903e9b35c9ace43fd1d9b
+  revision: 15802d6421ab1d8dbacd3bfbd84e1679215cf40f
   specs:
     kuniri (0.0.1)
 

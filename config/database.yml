@@ -9,20 +9,25 @@ default: &default
   pool: 5
   timeout: 5000
 
+prod: &prod
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
 development:
   <<: *default
   database: db/development.sqlite3
-
+#  databese: database/development
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
   <<: *default
   database: db/test.sqlite3
-
+#  database: db/testPg
 production:
-  <<: *default
-  database: db/production.sqlite3
-
+  <<: *prod
+#  database: db/production.sqlite3
+  database: db/productionPg
 cucumber:
   <<: *test

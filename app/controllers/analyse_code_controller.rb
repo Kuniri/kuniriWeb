@@ -72,9 +72,9 @@ class AnalyseCodeController < ApplicationController
 		end
 
 		def create_output_xml_path
-			system("mkdir public/#{current_user.id}")
-			system("mkdir public/#{current_user.id}/#{@project.name}")
-			"public/#{current_user.id}/#{@project.name}/class_data.xml"
+			system("mkdir public/#{current_user.id}_id")
+			system("mkdir public/#{current_user.id}_id/#{@project.name}")
+			"public/#{current_user.id}_id/#{@project.name}/class_data.xml"
 		end
 
 		def create_local_config
