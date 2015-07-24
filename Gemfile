@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,14 +21,14 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.10'
+# kuniri gem
+gem 'kuniri', :git => 'https://github.com/rodrigosiqueira/kuniri'
 
 # Use for lateral menu
 gem "simple-navigation"
 
-# kuniri gem
-gem 'kuniri', :path => 'kuniri'
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.10'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -57,6 +55,17 @@ group :development, :test do
   gem "codeclimate-test-reporter", group: :test, require: nil
   gem 'bootstrap-sass', '~> 3.2.0'
   gem 'autoprefixer-rails'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 
+end
+
+group :production do
+  # Use postgress gem
+  gem 'pg'
+  # Using this gem to integrate all other in production environment
+  gem 'rails_12factor'
+  # kuniri gem
+  # gem 'kuniri', :git => 'https://github.com/rodrigosiqueira/kuniri'
 end
 
